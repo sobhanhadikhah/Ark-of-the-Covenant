@@ -16,11 +16,11 @@ function App() {
     setTheme(theme === "light" ? "dark" : "light")
   }
   return (
-    <AnimatePresence>
-      <motion.div initial={{ backgroundColor: theme === "dark" ? '#1B1A1A' : '#fff' }}
-        animate={{ backgroundColor: theme === "dark" ? '#1B1A1A' : '#fff' }}
-        exit={{ backgroundColor: theme === "dark" ? '#1B1A1A' : '#fff' }}
-        className='overflow-hidden     h-screen' >
+    <AnimatePresence exitBeforeEnter >
+      <motion.div initial={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
+        animate={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
+        exit={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
+        className='h-screen py-2 ' >
         <Navbar theme={theme} togglelightandday={hancleonToggle} />
         <Routes>
           <Route path='/' element={<Home />} />

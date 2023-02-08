@@ -28,7 +28,7 @@ function CardHandemade() {
         const purchase = purchaseRef.current;
         const desc = descRef.current
         title.style.transform = "translateZ(150px)";
-        img.style.transform = "translateZ(100px) rotateZ(-45deg)";
+        /* img.style.transform = "translateZ(100px) rotateZ(-45deg)"; */
         sizesBox.style.transform = "translateZ(100px)";
         purchase.style.transform = "translateZ(75px)";
         desc.style.transform = "translateZ(75px)";
@@ -42,13 +42,14 @@ function CardHandemade() {
         const sizesBox = sizesboxRef.current;
         const purchase = purchaseRef.current;
         title.style.transform = "translateZ(0px)";
-        img.style.transform = "translateZ(0px) rotateZ(0deg)";
+        /* img.style.transform = "translateZ(0px) rotateZ(0deg)"; */
         sizesBox.style.transform = "translateZ(0px)";
         purchase.style.transform = "translateZ(0px)";
     }
     return (
         <div
-            className=" mx-3 bg-orange-300 "
+            className=" text-[#01030F] bg-gray-100 font-poppins cursor-pointer shadow-2xl min-w-3xl border-2  transition-all duration-150 ease-linear dark:bg-orange-400
+              rounded-[25px]  "
             ref={cardRef}
             style={{
                 transform: `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`,
@@ -57,25 +58,23 @@ function CardHandemade() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <img
-                ref={imgRef}
-                src={nikeshoes}
-                alt="Nike-Shoe"
-                className=""
-            />
-            <h1 className="" ref={titleRef}>
+            <div className=' flex my-4 items-center justify-center self-center' >
+                <img
+                    ref={imgRef}
+                    src={nikeshoes}
+                    alt="Nike-Shoe"
+                    className=" items-center justify-center text-center  "
+                />
+            </div>
+            <h1 className="font-bold font-poppins mx-3 " ref={titleRef}>
                 Nike Dunk High
             </h1>
-            <p ref={descRef}>
+            <p ref={descRef} className='mx-3 my-4 pb-5 ' >
                 Nike Dunk High is a high-top version of the classic Nike Dunk sneaker,
                 featuring a padded collar for added support and comfort.
             </p>
 
-            <div className="" ref={purchaseRef}>
-                <button className=" w-full bg-blue-500 rounded-md " >
-                    Purchase
-                </button>
-            </div>
+
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import personalpic from "../assets/personalpic.jpg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { BsSun } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
@@ -27,9 +27,12 @@ function Navbar({ togglelightandday, theme }) {
   return (
 
     <AnimatePresence  >
-      <div div className=' w-full h-[98px] justify-between items-center   ' >
-        <div className='flex items-center dark:text-[#bdbdbd]  text-black max-w-4xl mx-auto p-6   ' >
-          <img src={personalpic} className=' mx-3 rounded-full cursor-pointer  dark:shadow-orange-400 shadow-lg shadow-slate-400 hover:-translate-y-3 dark:hover:shadow-orange-900 transition duration-150 w-[48px] h-[48px] ' alt="logo" />
+      <div div className=' w-full h-[98px] justify-between font-poppins items-center   ' >
+        <div className='flex items-center dark:text-[#bdbdbd]  text-black max-w-[1240px] mx-auto p-6   ' >
+          {/* personal pic for anything can be logo  */}
+          {/* <img src={personalpic} className=' mx-3 hover:scale-125 rounded-full cursor-pointer  dark:shadow-orange-400 shadow-lg shadow-slate-400
+           hover:-translate-y-3
+           dark:hover:shadow-orange-900 transition duration-150 w-[48px] h-[48px] ' alt="logo" /> */}
           <h3 className='dark:text-white text-black font-semibold ' >
             Sobhan
           </h3>
@@ -44,7 +47,7 @@ function Navbar({ togglelightandday, theme }) {
             <ul className=' hidden md:flex w-full  font-semibold list-none justify-end ' >
               {navbarText.map((text, i) => (
                 <div key={i} className='flex' >
-                  <li className='mx-3 cursor-pointer  ' ><Link to={text.path}  >{text.title}</Link></li>
+                  <li className='mx-3 cursor-pointer x  ' ><NavLink to={text.path}  >{text.title}</NavLink></li>
                   <span className='text-orange-400  ' >|</span>
 
                 </div>
@@ -64,12 +67,15 @@ function Navbar({ togglelightandday, theme }) {
 
           </div>
           {navtoggle === true ? (
-            <div className="dark:bg-orange-400 shadow-md shadow-slate-400 dark:shadow-none dark:text-white md:hidden 
+            <div className="dark:bg-orange-400 bg-white shadow-md z-30 dark:shadow-black dark:shadow-md  dark:border-2 shadow-slate-400
+              dark:text-white md:hidden 
           absolute p-6 top-20 right-0 mx-4 my-2 min-w-[140px]  rounded-xl sidebar "  >
               <ul className='list-none flex-col text-center justify-center items-center flex-1 ' >
                 {navbarText.map((text, i) => (
                   <div className='' key={i} >
-                    <li className={`flex   ${i === navbarText.length - 1 ? 'mr-0' : 'mb-4'} text-center justify-center items-center border-orange-400 text-[16px] font-poppins font-normal`}  ><Link to={text.path} > {text.title} </Link></li>
+                    <li className={`flex   ${i === navbarText.length - 1 ? 'mr-0' : 'mb-4'} text-center justify-center items-center
+                     border-orange-400  text-[16px]
+                      font-poppins font-normal`}  ><NavLink to={text.path} > {text.title} </NavLink></li>
                   </div>
                 ))}
               </ul>
