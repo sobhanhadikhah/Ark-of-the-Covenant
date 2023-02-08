@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.bandw{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+ }
+ .label {
+    width: 50px;
+    height: 26px;
+    background-color:#111;
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+  }
+  
+  
