@@ -20,7 +20,7 @@ function App() {
       <motion.div initial={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
         animate={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
         exit={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
-        className='h-screen py-2 ' >
+        className='h-screen py-2 overflow-auto ' >
         <Navbar theme={theme} togglelightandday={hancleonToggle} />
         <Routes>
           <Route path='/' element={<Home />} />

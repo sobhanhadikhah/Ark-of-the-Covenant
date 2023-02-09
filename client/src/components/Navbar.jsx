@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BsSun } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import { RiMenu4Fill } from "react-icons/ri";
+import { DiReact } from "react-icons/di"
 function Navbar({ togglelightandday, theme }) {
   const [navtoggle, setNavtoggle] = useState(false);
   const navbarText = [
@@ -28,11 +29,12 @@ function Navbar({ togglelightandday, theme }) {
 
     <AnimatePresence  >
       <div div className=' w-full h-[98px] justify-between font-poppins items-center   ' >
-        <div className='flex items-center dark:text-[#bdbdbd]  text-black max-w-[1240px] mx-auto p-6   ' >
+        <div className='flex items-center dark:text-[#bdbdbd]   text-black max-w-[1240px] mx-auto p-6   ' >
           {/* personal pic for anything can be logo  */}
           {/* <img src={personalpic} className=' mx-3 hover:scale-125 rounded-full cursor-pointer  dark:shadow-orange-400 shadow-lg shadow-slate-400
            hover:-translate-y-3
            dark:hover:shadow-orange-900 transition duration-150 w-[48px] h-[48px] ' alt="logo" /> */}
+          {/* <DiReact size={30} className='text-blue-400   ' /> */}
           <h3 className='dark:text-white text-black font-semibold ' >
             Sobhan
           </h3>
