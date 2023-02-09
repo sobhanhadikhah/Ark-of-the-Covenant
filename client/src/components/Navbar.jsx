@@ -14,7 +14,7 @@ function Navbar({ togglelightandday, theme }) {
       path: "/"
     },
     {
-      title: "Githube",
+      title: "Skills",
       path: "/Githube"
     }, {
       title: "Email",
@@ -28,8 +28,9 @@ function Navbar({ togglelightandday, theme }) {
   return (
 
     <AnimatePresence  >
-      <div div className=' w-full h-[98px] justify-between font-poppins items-center   ' >
-        <div className='flex items-center dark:text-[#bdbdbd]   text-black max-w-[1240px] mx-auto p-6   ' >
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, ease: 'anticipate' }} div className=' w-full h-[98px] sticky top-0 z-30
+       justify-between dark:bg-transparent  font-poppins items-center mb-10 md:mb-0 bg-opacity-95 bg-white md:bg-opacity-90 md:bg-white  dark:bg-opacity-10 md:bg-transparent  ' >
+        <div className='flex items-center dark:text-[#bdbdbd]    text-black max-w-[1240px] mx-auto p-6  ' >
           {/* personal pic for anything can be logo  */}
           {/* <img src={personalpic} className=' mx-3 hover:scale-125 rounded-full cursor-pointer  dark:shadow-orange-400 shadow-lg shadow-slate-400
            hover:-translate-y-3
@@ -86,7 +87,7 @@ function Navbar({ togglelightandday, theme }) {
 
         </div>
 
-      </div >
+      </motion.div >
     </AnimatePresence>
   )
 }
