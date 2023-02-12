@@ -5,11 +5,11 @@ import { DiReact } from "react-icons/di"
 import { motion, wrap } from 'framer-motion';
 import { RiSendPlaneFill } from "react-icons/ri";
 import NikeShoe from "../assets/Nike-Shoe.png"
-import { Link } from 'react-router-dom';
+import { fadein } from "../utilis/motionVarition"
 import { RxGithubLogo, RxInstagramLogo, RxLinkedinLogo } from "react-icons/rx";
 function Hero() {
     return (
-        <div className='max-w-[1240px] mx-auto my-8 md:h-screen ' >
+        <div id="hero" className='max-w-[1240px] mx-auto my-8 md:h-screen  ' >
             {/*             <div className='grid  md:grid-cols-2 gap-8   ' >
                 <CardHandemade />
                 <CardHandemade />
@@ -34,24 +34,26 @@ function Hero() {
                         shadow-black shadow-2xl ml-5  dark:shadow-2xl dark:shadow-orange-400 w-[258px]  `} alt="pic1" />
 
 
+
                     <div className='  py-4 font-poppins mt-6 md:mt-0   md:ml-5   ' >
                         <div className='flex flex-col' >
-                            <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 2 }} transition={{ duration: 2, }}
-                                className=' dark:text-white font-semibold text-[32px] mx-8 leading-normal  text-4xl ' >Hi there, im Sobhan Hadikhah</motion.h1>
+                            <motion.h1 initial="hidden" animate="visible" variants={fadein}
+                                className=' dark:text-white font-semibold  text-[32px] mx-8 leading-normal  text-4xl ' >Hi there, im Sobhan Hadikhah</motion.h1>
                             <motion.h3 className='dark:text-gray-100 text-gray-500 mx-8 text-sm font-semibold ' >
                                 I am a front-end <span className='text-blue-400 font-bold font-poppins flex-none'
                                 >React JS <motion.div className='inline-block' animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, ease: 'linear' }} ><DiReact className=' inline-block items-center bg-transparent justify-center text-center  ' size={30} /></motion.div>  </span>   developer.  </motion.h3>
                             <motion.p className='max-w-[780px]   mb-3 justify-start  self-start  leading-loose  mx-8  dark:text-gray-300 mt-2 font-poppins
                              text-gray-400  ' >
                                 I started my path to Android world by starting with Java and Road.
-                                I gained significant experience in Gill Marketing Company and changed my path to the world of web and web applications. I entered ReactJS in 2020 and I am improving my level. My knowledge is in this framework
+                                I gained significant experience in Gill Marketing Company and changed my path to the world of web and web applications.
+                                I entered ReactJS in 2020 and I am improving my level of knowledge is in this framework.
                             </motion.p>
 
                         </div>
-                        <Link target="_blank" to={'https://drive.google.com/file/d/1REdGsqHDZ7TdiJWxjoa0BYgJ3mR33I9W/view?usp=sharing'}
-                            className='bg-[#1977F3] max-w-[220px] text-center justify-center my-4 shadow-md shadow-black ease-in-out items-center
+                        <a target="_blank" href={'https://drive.google.com/file/d/1REdGsqHDZ7TdiJWxjoa0BYgJ3mR33I9W/view?usp=sharing'}
+                            className='bg-[#1977F3] max-w-[220px] text-center justify-center my-4 shadow-md dark:hover:shadow-orange-300 hover:shadow-black ease-in-out items-center
                               h-12 flex mx-8
-                         text-white rounded-md font-semibold hover:scale-105  transition-all duration-100 ' >Resume</Link>
+                         text-white rounded-md font-semibold hover:scale-105  transition-all duration-100 ' >Resume</a>
                         <div className='mx-8 flex my-3 flex-row gap-3 text-black dark:text-white  ' >
                             <RxGithubLogo size={30} />
                             <RxInstagramLogo size={30} />

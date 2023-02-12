@@ -1,8 +1,14 @@
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Slider from "./Slider";
+import Hero from "./Hero";
+import Conectme from "./conectme";
+import Fotter from "./Fotter";
 export {
         Navbar,
         Home,
-        Slider
+        Slider,
+        Hero,
+        Conectme,
+        Fotter
 }

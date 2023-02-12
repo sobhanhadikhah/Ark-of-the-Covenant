@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Navbar, Home } from './components/'
+import React, { useEffect, useState, } from 'react'
+import { Navbar, Home, Slider, Hero, Conectme, Fotter } from './components/'
 import { Route, Router, Routes } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion"
 function App() {
@@ -16,15 +16,14 @@ function App() {
     setTheme(theme === "light" ? "dark" : "light")
   }
   return (
-    <AnimatePresence exitBeforeEnter >
+    <AnimatePresence exitBeforeEnter  >
       <motion.div initial={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
         animate={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
         exit={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
-        className='h-screen  overflow-auto ' >
+        className='   ' >
         <Navbar theme={theme} togglelightandday={hancleonToggle} />
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
+        <Home />
+
       </motion.div>
     </AnimatePresence>
   )

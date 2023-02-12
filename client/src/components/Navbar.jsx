@@ -1,36 +1,38 @@
 import React, { useState } from 'react'
 import personalpic from "../assets/personalpic.jpg";
-import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { BsSun } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import { RiMenu4Fill } from "react-icons/ri";
-import { DiReact } from "react-icons/di"
+import { Link, animateScroll as scroll } from "react-scroll";
 function Navbar({ togglelightandday, theme }) {
   const [navtoggle, setNavtoggle] = useState(false);
   const navbarText = [
     {
       title: "Home",
-      path: "/"
+      path: "hero"
     },
     {
       title: "Skills",
-      path: "/Githube"
+      path: "skills"
     }, {
-      title: "Email",
-      path: "/"
+      title: "Contact",
+      path: "contect"
     },
-    {
-      title: "About",
-      path: "/About"
-    },
+
   ]
+  const handleoncolse = () => {
+    setNavtoggle((prev) => !prev)
+  }
+  const handleonscroll = () => {
+    scroll.scrollToBottom();
+  }
   return (
 
     <AnimatePresence  >
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, ease: 'anticipate' }} div className=' w-full h-[98px] sticky top-0 z-30
+      <motion.div id='navbar' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, ease: 'anticipate' }} className=' w-full h-[98px] sticky top-0 z-30
        justify-between dark:bg-transparent  font-poppins items-center mb-10 md:mb-0 bg-opacity-95 bg-white md:bg-opacity-90 md:bg-white  dark:bg-opacity-10 md:bg-transparent  ' >
-        <div className='flex items-center dark:text-[#bdbdbd]    text-black max-w-[1240px] mx-auto p-6  ' >
+        <div className='flex items-center  dark:text-[#bdbdbd]    text-black max-w-[1240px] mx-auto p-6  ' >
           {/* personal pic for anything can be logo  */}
           {/* <img src={personalpic} className=' mx-3 hover:scale-125 rounded-full cursor-pointer  dark:shadow-orange-400 shadow-lg shadow-slate-400
            hover:-translate-y-3
@@ -48,13 +50,19 @@ function Navbar({ togglelightandday, theme }) {
           <div className=' w-full self-end   ' >
 
             <ul className=' hidden md:flex w-full  font-semibold list-none justify-end ' >
-              {navbarText.map((text, i) => (
-                <div key={i} className='flex' >
-                  <li className='mx-3 cursor-pointer x  ' ><NavLink to={text.path}  >{text.title}</NavLink></li>
-                  <span className='text-orange-400  ' >|</span>
 
+
+              {navbarText.map((lable, i) => (
+                <div key={i} className='flex'  >
+                  <li className='mx-3 cursor-pointer x  ' >
+                    <Link to={lable.path} smooth={true} duration={300} offset={0}  >{lable.title}</Link></li>
+                  <span className='text-orange-400  ' >|</span>
                 </div>
               ))}
+
+
+
+
               <BsSun size={24} className={` cursor-pointer ml-3 hover:text-yellow-500 dark:hover:text-yellow-500  dark:text-yellow-400 text-black  `} onClick={togglelightandday} />
 
             </ul>
@@ -78,7 +86,8 @@ function Navbar({ togglelightandday, theme }) {
                   <div className='' key={i} >
                     <li className={`flex   ${i === navbarText.length - 1 ? 'mr-0' : 'mb-4'} text-center justify-center items-center
                      border-orange-400  text-[16px]
-                      font-poppins font-normal`}  ><NavLink to={text.path} > {text.title} </NavLink></li>
+                      font-poppins font-normal`}  >
+                      <Link onClick={handleoncolse} smooth={true} offset={0} duration={300} activeClass='active' to={text.path} > {text.title} </Link></li>
                   </div>
                 ))}
               </ul>
