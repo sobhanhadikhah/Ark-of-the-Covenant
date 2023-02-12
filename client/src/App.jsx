@@ -18,8 +18,8 @@ function App() {
   return (
     <AnimatePresence exitBeforeEnter  >
       <motion.div initial={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
-        animate={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
-        exit={{ backgroundColor: theme === "dark" ? '#202320' : '#fff' }}
+        animate={{ backgroundColor: theme === "dark" ? '#2F2F2F' : '#fff' }}
+        exit={{ backgroundColor: theme === "dark" ? '#2F2F2F' : '#fff' }}
         className='   ' >
         <Navbar theme={theme} togglelightandday={hancleonToggle} />
         <Home />

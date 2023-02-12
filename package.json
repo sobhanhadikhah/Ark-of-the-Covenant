@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "framer-motion": "^9.0.2",
     "react-code-ui": "^0.0.4-beta-0",
     "react-icons": "^4.7.1",

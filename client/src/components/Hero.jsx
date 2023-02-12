@@ -9,7 +9,7 @@ import { fadein } from "../utilis/motionVarition"
 import { RxGithubLogo, RxInstagramLogo, RxLinkedinLogo } from "react-icons/rx";
 function Hero() {
     return (
-        <div id="hero" className='max-w-[1240px] mx-auto my-8 md:h-screen  ' >
+        <div id="hero" className='max-w-[1240px] mx-auto my-8 md:h-screen dark:bg-[2F2F2F] ' >
             {/*             <div className='grid  md:grid-cols-2 gap-8   ' >
                 <CardHandemade />
                 <CardHandemade />
@@ -37,7 +37,7 @@ function Hero() {
 
                     <div className='  py-4 font-poppins mt-6 md:mt-0   md:ml-5   ' >
                         <div className='flex flex-col' >
-                            <motion.h1 initial="hidden" animate="visible" variants={fadein}
+                            <motion.h1 initial="hidden" whileInView="visible" variants={fadein}
                                 className=' dark:text-white font-semibold  text-[32px] mx-8 leading-normal  text-4xl ' >Hi there, im Sobhan Hadikhah</motion.h1>
                             <motion.h3 className='dark:text-gray-100 text-gray-500 mx-8 text-sm font-semibold ' >
                                 I am a front-end <span className='text-blue-400 font-bold font-poppins flex-none'
@@ -51,9 +51,9 @@ function Hero() {
 
                         </div>
                         <a target="_blank" href={'https://drive.google.com/file/d/1REdGsqHDZ7TdiJWxjoa0BYgJ3mR33I9W/view?usp=sharing'}
-                            className='bg-[#1977F3] max-w-[220px] text-center justify-center my-4 shadow-md dark:hover:shadow-orange-300 hover:shadow-black ease-in-out items-center
+                            className='bg-[#1977F3] max-w-[220px] text-center justify-center my-4 shadow-md   hover:scale-105 dark:hover:bg-blue-500   ease-in-out items-center
                               h-12 flex mx-8
-                         text-white rounded-md font-semibold hover:scale-105  transition-all duration-100 ' >Resume</a>
+                         text-white rounded-md font-semibold   transition-all duration-100 ' >Resume</a>
                         <div className='mx-8 flex my-3 flex-row gap-3 text-black dark:text-white  ' >
                             <RxGithubLogo size={30} />
                             <RxInstagramLogo size={30} />
