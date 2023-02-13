@@ -1,6 +1,8 @@
 import React, { useEffect, useState, } from 'react'
 import { Navbar, Home, Slider, Hero, Conectme, Fotter } from './components/'
 import { Route, Router, Routes } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { motion, AnimatePresence } from "framer-motion"
 function App() {
   const [count, setCount] = useState(0)

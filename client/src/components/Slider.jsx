@@ -15,7 +15,7 @@ function Slider() {
 
 
     return (
-        <div id="skills" className='   md:h-screen  dark:bg-[#2F2F2F] bg-white  ' >
+        <div id="skills" className='   md:h-screen    ' >
             <div className='text-center py-28   ' >
                 <motion.h1 initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.25 }} variants={fadein}
                     className='text-black dark:text-white font-poppins font-bold text-7xl  ' >

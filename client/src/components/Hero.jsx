@@ -3,6 +3,7 @@ import CardHandemade from './CardHandemade';
 import personalpic from "../assets/personalpic.jpg";
 import { DiReact } from "react-icons/di"
 import { motion, wrap } from 'framer-motion';
+import { FaWhatsappSquare } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
 import NikeShoe from "../assets/Nike-Shoe.png"
 import { fadein } from "../utilis/motionVarition"
@@ -55,10 +56,26 @@ function Hero() {
                               h-12 flex mx-8
                          text-white rounded-md font-semibold   transition-all duration-100 ' >Resume</a>
                         <div className='mx-8 flex my-3 flex-row gap-3 text-black dark:text-white  ' >
-                            <RxGithubLogo size={30} />
-                            <RxInstagramLogo size={30} />
-                            <RxLinkedinLogo size={30} />
-                            <RiSendPlaneFill className='     ' size={30} />
+                            <a target='_blank' href='https://github.com/sobhanhadikhah' className='hover:text-blue-500 hover:dark:text-orange-500 transition duration-100 ease-in hover:scale-105 '  >
+
+                                <RxGithubLogo size={30} />
+                            </a>
+                            <a target='_blank' href='https://www.instagram.com/theycallmesobhan/' className='hover:text-blue-500 hover:dark:text-orange-500 hover:scale-105 transition duration-100 ease-in ' >
+                                <RxInstagramLogo size={30} />
+
+                            </a>
+                            <a target='_blank' href='https://www.linkedin.com/in/sobhan-hadikhah-515a90258' className='hover:text-blue-500 hover:dark:text-orange-500 hover:scale-105 transition duration-100 ease-in ' >
+                                <RxLinkedinLogo size={30} />
+
+                            </a>
+                            <a target='_blank' href='https://t.me/theycallmesobhan' className='hover:text-blue-500 hover:dark:text-orange-500 hover:scale-105 transition duration-100 ease-in ' >
+                                <RiSendPlaneFill className='     ' size={30} />
+
+                            </a>
+                            <a href='https://wa.me/message/ZD42KSBSXUPSN1' target='_blank' className='hover:text-blue-500 hover:dark:text-orange-500 hover:scale-105 transition duration-100 ease-in' >
+                                <FaWhatsappSquare size={30} />
+
+                            </a>
                         </div>
                         <span className='text-orange-400 self-start font-poppins text-lg justify-start mx-8 font-semibold py-4 mt-14 '
                         >Now you can drag Me 🙂 !!!</span>

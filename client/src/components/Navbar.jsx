@@ -27,6 +27,9 @@ function Navbar({ togglelightandday, theme }) {
   const handleonscroll = () => {
     scroll.scrollToBottom();
   }
+  function scroltop() {
+    scroll.scrollToTop();
+  }
   return (
 
     <AnimatePresence  >
@@ -38,15 +41,18 @@ function Navbar({ togglelightandday, theme }) {
            hover:-translate-y-3
            dark:hover:shadow-orange-900 transition duration-150 w-[48px] h-[48px] ' alt="logo" /> */}
           {/* <DiReact size={30} className='text-blue-400   ' /> */}
-          <h3 className='dark:text-white text-black font-semibold ' >
-            Sobhan
-          </h3>
-          <motion.span drag dragConstraints={{
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0
-          }} className='ml-2 cursor-pointer bg-black dark:bg-orange-400 dark:text-white text-white font-semibold p-1 rounded-md ' >DEV</motion.span>
+
+          <div onClick={scroltop} className='flex items-center cursor-pointer ' >
+            <h3 className='dark:text-white text-black font-semibold ' >
+              Sobhan
+            </h3>
+            <motion.span drag dragConstraints={{
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0
+            }} className='ml-2 cursor-pointer bg-black dark:bg-orange-400 dark:text-white text-white font-semibold p-1 rounded-md ' >DEV</motion.span>
+          </div>
           <div className=' w-full self-end   ' >
 
             <ul className=' hidden md:flex w-full  font-semibold list-none justify-end ' >
